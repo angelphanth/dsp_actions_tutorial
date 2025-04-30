@@ -17,6 +17,12 @@ jobs:
   penguin-say-anything:
     runs-on: ubuntu-latest
     steps:
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+      python-version: '3.x'
+    - name: Install dependencies
+      run: pip install cowpy
     - name: biosustain
       run: cowpy -c tux Hello DTU biosustain!
     - name: bioengineering
@@ -25,6 +31,13 @@ jobs:
   cow-say-anything:
     runs-on: ubuntu-latest
     steps:
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+      python-version: '3.x'
+
+    - name: Install dependencies
+      run: pip install cowsay
     - name: biosustain
       run: cowsay -cheese -t "Hello DTU biosustain!"
     - name: bioengineering
