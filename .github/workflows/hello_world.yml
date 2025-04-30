@@ -24,9 +24,9 @@ jobs:
     - name: Install dependencies
       run: pip install cowpy
     - name: biosustain
-      run: cowpy -c tux Hello DTU biosustain!
+      run: cowpy -c tux Hello DTU biosustain
     - name: bioengineering
-      run: cowpy -c tux Hello DTU bioengineering!
+      run: cowpy -c tux Hello DTU bioengineering
 
   cow-say-anything:
     runs-on: ubuntu-latest
@@ -38,6 +38,6 @@ jobs:
     - name: Install dependencies
       run: pip install cowsay
     - name: biosustain
-      run: cowsay -cheese -t "Hello DTU biosustain!"
+      run: cowsay -c cheese -t "Hello DTU biosustain!"
     - name: bioengineering
-      run: cowsay -cheese -t "Hello DTU bioengineering!"
+      run: cowsay -c cheese -t "Hello DTU bioengineering!"
