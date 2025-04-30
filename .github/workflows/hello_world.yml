@@ -14,21 +14,35 @@ jobs:
     - name: bioengineering
       run: echo "Hello DTU bioengineering!"
 
-  penguin-say-anything:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Set up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.x'
-    - name: Install dependencies
-      run: pip install cowpy
-    - name: biosustain
-      run: cowpy -c tux Hello DTU biosustain
-    - name: bioengineering
-      run: cowpy -c tux Hello DTU bioengineering
+  # penguin-say-anything:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #   - name: Set up Python
+  #     uses: actions/setup-python@v4
+  #     with:
+  #       python-version: '3.x'
+  #   - name: Install dependencies
+  #     run: pip install cowpy
+  #   - name: biosustain
+  #     run: cowpy -c tux Hello DTU biosustain
+  #   - name: bioengineering
+  #     run: cowpy -c tux Hello DTU bioengineering
 
-  cow-say-anything:
+  # cow-say-anything:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #   - name: Set up Python
+  #     uses: actions/setup-python@v4
+  #     with:
+  #       python-version: '3.x'
+  #   - name: Install dependencies
+  #     run: pip install cowsay
+  #   - name: biosustain
+  #     run: cowsay -c cheese -t "Hello DTU biosustain!"
+  #   - name: bioengineering
+  #     run: cowsay -c cheese -t "Hello DTU bioengineering!"
+
+  run-python-script:
     runs-on: ubuntu-latest
     steps:
     - name: Set up Python
@@ -36,8 +50,9 @@ jobs:
       with:
         python-version: '3.x'
     - name: Install dependencies
-      run: pip install cowsay
-    - name: biosustain
-      run: cowsay -c cheese -t "Hello DTU biosustain!"
-    - name: bioengineering
-      run: cowsay -c cheese -t "Hello DTU bioengineering!"
+      run: pip install cowpy 
+    - name: where are you
+      run: ls -l
+    - name: Run py script
+      run: python exercise1-medium.py
+
