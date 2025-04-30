@@ -13,3 +13,19 @@ jobs:
       run: echo "Hello DTU biosustain!"
     - name: bioengineering
       run: echo "Hello DTU bioengineering!"
+
+  penguin-say-anything:
+    runs-on: ubuntu-latest
+    steps:
+    - name: biosustain
+      run: cowpy -c tux Hello DTU biosustain!
+    - name: bioengineering
+      run: cowpy -c tux Hello DTU bioengineering!
+
+  cow-say-anything:
+    runs-on: ubuntu-latest
+    steps:
+    - name: biosustain
+      run: cowsay -cheese -t "Hello DTU biosustain!"
+    - name: bioengineering
+      run: cowsay -cheese -t "Hello DTU bioengineering!"
