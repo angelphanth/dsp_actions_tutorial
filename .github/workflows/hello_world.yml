@@ -43,6 +43,9 @@ jobs:
   #     run: cowsay -c cheese -t "Hello DTU bioengineering!"
 
   run-python-script:
+    name: Running python script
+    needs:
+      - say-hello-world
     runs-on: ubuntu-latest
     steps:
     - name: Check out repository
